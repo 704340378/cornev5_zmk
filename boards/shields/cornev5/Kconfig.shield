@@ -1,6 +1,4 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
+# Kconfig.shield
 config SHIELD_CORNEV5_LEFT
     def_bool $(shields_list_contains,cornev5_left)
 
