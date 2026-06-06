@@ -2,7 +2,7 @@ file_format: "1"
 id: corne
 name: Corne
 type: shield
-url: https://github.com/foostan/crkbd/
+url: https://zmk-physical-layout-converter.streamlit.app/?layout=H4sIAAAAAAACA4WTwarCMBBF935F6LqW3JlEW9f-hbyFC8WFIFQFS-m_G0to8iTv3VUnk8NkZg4dV8ZU1-Nwez7u1c6M4RgS-9P5-Lw-lsTChMwhZowZTfUKCdvY2lTDHOnWTPU3AAZIBkAKgGaALdw7VsBngLgCsMmArS8ALQM69gQs6xIgc4JuCkptOEakPsGEggkFEwoiFEwomFAwoWBCQYWCCgUTCioUVCiYUGFChQkVJlSIUGFCpbztjgGw7A2AdAk6J5Tu0jFCGx8BLT_ifgEh7FNvfQL6YQ7_WKdfmmg1hJdZs4_FxKVivnFtqqZa_Ff-rbbOy3WNI9W60njrfL6gkg0YkbTFCPzM389pWk1vXE2vDd4GAAA%3D
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
