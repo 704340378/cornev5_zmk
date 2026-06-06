@@ -1,12 +1,18 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-if SHIELD_CORNEV5_LEFT || SHIELD_CORNEV5_RIGHT
-config ZMK_KEYBOARD_NAME
-    default "Corne v5"
-endif
+# boards/shields/cornev5/Kconfig.defconfig
 
 if SHIELD_CORNEV5_LEFT
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+    config ZMK_KEYBOARD_NAME
+        default "Corne v5 Left"
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_CORNEV5_RIGHT
+    config ZMK_KEYBOARD_NAME
+        default "Corne v5 Right"
+endif
+
+if SHIELD_CORNEV5_LEFT || SHIELD_CORNEV5_RIGHT
+    config ZMK_SPLIT
+        default y
 endif
