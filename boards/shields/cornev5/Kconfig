@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: MIT
 #
 
-config BOARD_CORNEV5_LEFT
+config SHIELD_CORNEV5_LEFT
     bool
 
-config BOARD_CORNEV5_RIGHT
+config SHIELD_CORNEV5_RIGHT
     bool
