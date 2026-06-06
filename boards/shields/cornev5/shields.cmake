@@ -1,0 +1,5 @@
+if(CONFIG_SHIELD_CORNEV5_LEFT OR CONFIG_SHIELD_CORNEV5_RIGHT)
+  zephyr_library()
+  zephyr_library_sources_ifdef(CONFIG_SHIELD_CORNEV5_LEFT  cornev5_left.overlay)
+  zephyr_library_sources_ifdef(CONFIG_SHIELD_CORNEV5_RIGHT cornev5_right.overlay)
+endif()
