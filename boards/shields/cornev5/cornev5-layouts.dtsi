@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    cornev5_phys_layout: cornev5_layout {
+    cornev5_layout: cornev5_layout {
         compatible = "zmk,physical-layout";
         display-name = "Layout";
 
