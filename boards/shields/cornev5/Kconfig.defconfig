@@ -1,18 +1,10 @@
-# boards/shields/corne/Kconfig.defconfig
-
-if SHIELD_CORNE_LEFT
+# Kconfig.defconfig
+if SHIELD_CORNEV5_LEFT
     config ZMK_KEYBOARD_NAME
-        default "Corne v5 Left"
-    config ZMK_SPLIT_ROLE_CENTRAL
-        default y
+        default "CorneV5 Left"
 endif
 
-if SHIELD_CORNE_RIGHT
+if SHIELD_CORNEV5_RIGHT
     config ZMK_KEYBOARD_NAME
-        default "Corne v5 Right"
-endif
-
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
-    config ZMK_SPLIT
-        default y
+        default "CorneV5 Right"
 endif
