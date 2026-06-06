@@ -1,8 +1,10 @@
+#include <physical_layouts.dtsi>
 
 / {
-    cornev5_phys_layout: cornev5_phys_layout {
+    cornev5_phys_layout: cornev5_layout {
         compatible = "zmk,physical-layout";
-        display-name = "CorneV5 Custom";
+        display-name = "Layout";
+
         transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
