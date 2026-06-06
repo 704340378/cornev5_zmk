@@ -4,16 +4,15 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/gpio/gpio.h>
-#include "corne-layouts.dtsi"   /* 路径相对于 config/ 或 shield 目录 */
-
+#include "corne-layouts.dtsi"
 
 / {
     chosen {
-        zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &four_by_six_layout;
+        zmk,matrix-transform = <&default_transform>;
+        zmk,physical-layouts = &cornev5_physical_layout;  // ← 改这里
     };
-
+};
     /*
      * 4 rows × 12 columns (6 left + 6 right)
      *
