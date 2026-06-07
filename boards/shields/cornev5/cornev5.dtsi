@@ -1,6 +1,11 @@
-/dts-v1/;
-/plugin/;
+/*
+*
+* Copyright (c) 2021 Darryl deHaan
+* SPDX-License-Identifier: MIT
+*
+*/
 
+/dts-v1/;
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/gpio/gpio.h>
 #include "cornev5-layouts.dtsi"
