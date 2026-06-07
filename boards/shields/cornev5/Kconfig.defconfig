@@ -1,10 +1,17 @@
-# Kconfig.defconfig
-if SHIELD_CORNEV5_LEFT
-    config ZMK_KEYBOARD_NAME
-        default "CorneV5 Left"
+if SHIELD_cornev5_LEFT
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "CORNEV5"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
 endif
 
-if SHIELD_CORNEV5_RIGHT
-    config ZMK_KEYBOARD_NAME
-        default "CorneV5 Right"
+if SHIELD_MY_KEYBOARD_LEFT || SHIELD_MY_KEYBOARD_RIGHT
+
+config ZMK_SPLIT
+    default y
+
 endif
