@@ -1,4 +1,3 @@
-// cornev5_right.overlay
 /dts-v1/;
 /plugin/;
 
@@ -8,6 +7,6 @@
     chosen {
         zmk,kscan = <&kscan0>;
         zmk,matrix-transform = <&default_transform>;
-        zmk,physical-layout = <&cornev5_layout>;
+        zmk,physical-layout = <&cornev5_phys_layout>;
     };
 };
