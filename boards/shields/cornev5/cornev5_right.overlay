@@ -1,17 +1,35 @@
-#include "cornev5.dtsi" // The shared dtsi file is included in the overlay
+#include "cornev5.dtsi"
 
-// Label of the kscan node in the dtsi
-&kscan0 {
-    col-gpios
-        = <&pro_micro 10 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 11 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 12 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 13 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        ;
+/* 启用 pro_micro 连接器 */
+&pro_micro {
+    status = "okay";
 };
 
-&default_transform { // Offset of 3 because the left side has 3 columns
+/* 给 kscan0 补充列引脚 */
+&kscan0 {
+    col-gpios =
+        <&pro_micro 10 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 11 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 12 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 13 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 14 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 15 GPIO_ACTIVE_HIGH>;
+};
+
+/* 设置矩阵列偏移 */
+&default_transform {
     col-offset = <6>;
+};
+
+/* ========== 分体必备：split 配置 ========== */
+/ {
+    chosen {
+        zmk,split = <&split0>;
+    };
+
+    split0: split {
+        compatible = "zmk,split";
+        /* 左侧写 central，右侧写 peripheral */
+        role = "central";
+    };
 };
