@@ -10,7 +10,7 @@
     };
 };
  
-    four_by_six_layout: keymap_transform {
+    cornev5_layout: keymap_transform {
         compatible = "zmk,matrix-transform";
         rows = <4>;
         columns = <12>;
