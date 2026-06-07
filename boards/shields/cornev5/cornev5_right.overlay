@@ -11,7 +11,7 @@
 };
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <0>;
 };
 
 / {
@@ -21,6 +21,13 @@
 
     split0: split {
         compatible = "zmk,split";
-        role = "peripheral";
+        role = "central";
+    };
+
+    gpio0 {
+        status = "okay";
+    };
+    gpio1 {
+        status = "okay";
     };
 };
