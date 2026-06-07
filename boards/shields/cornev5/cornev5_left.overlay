@@ -6,7 +6,7 @@
         <&gpio0 11 GPIO_ACTIVE_HIGH>,
         <&gpio0 12 GPIO_ACTIVE_HIGH>,
         <&gpio0 13 GPIO_ACTIVE_HIGH>,
-        <&gpio0 16 GPIO_ACTIVE_HIGH>,
+        <&gpio0 14 GPIO_ACTIVE_HIGH>,
         <&gpio0 15 GPIO_ACTIVE_HIGH>;
 };
 
@@ -22,5 +22,12 @@
     split0: split {
         compatible = "zmk,split";
         role = "central";
+    };
+
+    gpio0 {
+        status = "okay";
+    };
+    gpio1 {
+        status = "okay";
     };
 };
