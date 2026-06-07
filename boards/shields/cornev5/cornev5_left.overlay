@@ -1,5 +1,5 @@
 #include "cornev5.dtsi"
-/* 启用 P0、P1 端口，二选一或都加 */
+
 &gpio0 {
     status = "okay";
 };
@@ -7,24 +7,26 @@
 &gpio1 {
     status = "okay";
 };
+
 &kscan0 {
     col-gpios =
         <&gpio0 10 GPIO_ACTIVE_HIGH>,
         <&gpio0 11 GPIO_ACTIVE_HIGH>,
         <&gpio0 12 GPIO_ACTIVE_HIGH>,
         <&gpio0 13 GPIO_ACTIVE_HIGH>,
-        <&gpio0 14 GPIO_ACTIVE_HIGH>,
-        <&gpio0 16 GPIO_ACTIVE_HIGH>;
+        <&gpio0 16 GPIO_ACTIVE_HIGH>,
+        <&gpio0 15 GPIO_ACTIVE_HIGH>;
 };
 
 &default_transform {
-    col-offset = <0>;  /* 左侧无偏移 */
+    col-offset = <0>;
 };
 
 / {
     chosen {
         zmk,split = <&split0>;
     };
+
     split0: split {
         compatible = "zmk,split";
         role = "central";
