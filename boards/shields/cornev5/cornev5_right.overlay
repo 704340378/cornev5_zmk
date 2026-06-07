@@ -8,6 +8,6 @@
     chosen {
         zmk,kscan = <&kscan0>;
         zmk,matrix-transform = <&default_transform>;
-        zmk,physical-layout = <&cornev5_phys_layout>;
+        zmk,physical-layout = <&cornev5_layout>;
     };
 };
