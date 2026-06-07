@@ -1,4 +1,12 @@
 #include "cornev5.dtsi"
+/* 启用 P0、P1 端口，二选一或都加 */
+&gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
+};
 &kscan0 {
     col-gpios =
         <&gpio0 10 GPIO_ACTIVE_HIGH>,
