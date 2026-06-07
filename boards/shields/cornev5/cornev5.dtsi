@@ -21,12 +21,15 @@
     wakeup-source;
     diode-direction = "col2row";
 
-    /* 直接使用主控原生 GPIO，替换成你原理图上的真实引脚 */
+kscan0: kscan_matrix {
+    compatible = "zmk,kscan-gpio-matrix";
+    wakeup-source;
+    diode-direction = "col2row";
     row-gpios =
-        <&gpio 16 GPIO_ACTIVE_HIGH>,
-        <&gpio 17 GPIO_ACTIVE_HIGH>,
-        <&gpio 18 GPIO_ACTIVE_HIGH>,
-        <&gpio 19 GPIO_ACTIVE_HIGH>;
+        <&gpio0 4 GPIO_ACTIVE_HIGH>,
+        <&gpio0 5 GPIO_ACTIVE_HIGH>,
+        <&gpio0 6 GPIO_ACTIVE_HIGH>,
+        <&gpio0 7 GPIO_ACTIVE_HIGH>;
 };
 
     default_transform: matrix_transform {
