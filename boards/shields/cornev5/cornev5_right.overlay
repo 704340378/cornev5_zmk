@@ -14,20 +14,19 @@
     col-offset = <6>;
 };
 
-/ {
-    chosen {
-        zmk,split = <&split0>;
-    };
+&split0 {
+    compatible = "zmk,split";
+    role = "central";
+};
 
-    split0: split {
-        compatible = "zmk,split";
-        role = "central";
-    };
+&gpio0 {
+    status = "okay";
+};
 
-    gpio0 {
-        status = "okay";
-    };
-    gpio1 {
-        status = "okay";
-    };
+&gpio1 {
+    status = "okay";
+};
+
+chosen {
+    zmk,split = <&split0>;
 };
