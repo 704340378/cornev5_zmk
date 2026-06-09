@@ -1,19 +1,5 @@
 #include "cornev5.dtsi"
 
-&kscan0 {
-    col-gpios =
-        <&gpio0 10 GPIO_ACTIVE_HIGH>,
-        <&gpio0 11 GPIO_ACTIVE_HIGH>,
-        <&gpio0 12 GPIO_ACTIVE_HIGH>,
-        <&gpio0 13 GPIO_ACTIVE_HIGH>,
-        <&gpio0 14 GPIO_ACTIVE_HIGH>,
-        <&gpio0 15 GPIO_ACTIVE_HIGH>;
-};
-
-&default_transform {
-    col-offset = <0>;
-};
-
 / {
     chosen {
         zmk,split = <&split0>;
@@ -23,11 +9,8 @@
         compatible = "zmk,split";
         role = "central";
     };
+};
 
-    gpio0 {
-        status = "okay";
-    };
-    gpio1 {
-        status = "okay";
-    };
+&default_transform {
+    col-offset = <0>;   // ✅ 左半边偏移 0
 };
