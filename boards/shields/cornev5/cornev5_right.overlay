@@ -16,7 +16,7 @@
 
 &split1{
     compatible = "zmk,split";
-    role = "central";
+    role = "peripheral";
 };
 
 &gpio0 {
