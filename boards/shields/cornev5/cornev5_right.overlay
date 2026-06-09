@@ -14,19 +14,20 @@
     col-offset = <6>;
 };
 
-&split1{
-    compatible = "zmk,split";
-    role = "peripheral";
-};
+/ {
+    chosen {
+        zmk,split = <&split1>;
+    };
 
-&gpio0 {
-    status = "okay";
-};
+    split1: split {
+        compatible = "zmk,split";
+        role = "peripheral";
+    };
 
-&gpio1 {
-    status = "okay";
-};
-
-chosen {
-    zmk,split = <&split0>;
+    gpio0 {
+        status = "okay";
+    };
+    gpio1 {
+        status = "okay";
+    };
 };
