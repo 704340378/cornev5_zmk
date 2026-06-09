@@ -14,7 +14,7 @@
     col-offset = <6>;
 };
 
-&split0 {
+&split1{
     compatible = "zmk,split";
     role = "central";
 };
